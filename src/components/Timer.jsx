@@ -76,19 +76,19 @@ function TimerSettings ({ selectWorkTime, selectBreakTime, reloadSettings }) {
   return (
     <div className="timer__settings pure-u-1">
       <div className="pure-g">
-        <div className="pure-u-1-2">
+        <div className="pure-u-1">
           <div className="pure-g">
-            <div className="timer__settings-work-time pure-u-1 pure-u-sm-1-2">
+            <div className="timer__settings-work-time pure-u-1-2">
               <label className="timer__settings__label" htmlFor="work-time">Work Time</label>
-              <select id="work-times" name="worktime" onChange={selectWorkTime} defaultValue={defaultWorkTime}>
+              <select className="timer__settings__select" id="work-times" name="worktime" onChange={selectWorkTime} defaultValue={defaultWorkTime}>
                 {workTimes.map(opt => (
                   <option key={opt.seconds} value={opt.seconds}>{`${secToMin(opt.seconds)} minutes`}</option>
                 ))}
               </select>
             </div>
-            <div className="timer__settings-break-time pure-u-1 pure-u-sm-1-2">
+            <div className="timer__settings-break-time pure-u-1-2">
               <label className="timer__settings__label" htmlFor="break-time">Break Time</label>
-              <select id="break-times" name="breaktime" onChange={selectBreakTime} defaultValue={defaultBreakTime}>
+              <select className="timer__settings__select" id="break-times" name="breaktime" onChange={selectBreakTime} defaultValue={defaultBreakTime}>
                 {breakTimes.map(opt => (
                   <option key={opt.seconds} value={opt.seconds}>{`${secToMin(opt.seconds)} minutes`}</option>
                 ))}
@@ -96,7 +96,7 @@ function TimerSettings ({ selectWorkTime, selectBreakTime, reloadSettings }) {
             </div>
           </div>
         </div>
-        <div className="timer__settings__load pure-u-1-2">
+        <div className="timer__settings__load pure-u-1">
           <button className="timer__settings__load__button" onClick={reloadSettings}>Load Settings</button>
         </div>
       </div>

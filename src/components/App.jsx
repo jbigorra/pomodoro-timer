@@ -1,15 +1,6 @@
 import React from 'react';
 import { Timer } from './Timer';
-
-function Title () {
-  return (
-    <div className="title pure-g">
-      <div className="pure-u-1">
-        <h1>Pomodoro Timer</h1>
-      </div>
-    </div>
-  );
-}
+import { Title } from './Title';
 
 export default function App () {
   return (

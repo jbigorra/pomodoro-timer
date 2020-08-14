@@ -1,10 +1,11 @@
 :root {
-  --font-family: 'Nunito', sans-serif;
+  --font-family: 'Nunito', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body, pure-g {
-  font-family: 'Nunito' !important;
+body, .pure-g, .pure-g [class*=pure-u] {
+  font-family: var(--font-family) !important;
   font-size: 18px;
+  font-weight: 600;
   background-color: #fefef0;
 }
 
