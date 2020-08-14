@@ -1,0 +1,66 @@
+%flex-column-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+%margin-bottom {
+  margin-bottom: 0.75rem;
+}
+
+.timer {
+  $buttonColor: #59cfbe;
+  $buttonTextColor: white;
+  justify-content: center;
+
+  &__settings {
+    &-work-time {
+      @extend %flex-column-centered;
+      @extend %margin-bottom;
+      text-align: right;
+    }
+    &-break-time {
+      @extend %margin-bottom;
+      @extend %flex-column-centered;
+      text-align: left;
+    }
+    &__label {
+      margin-bottom: 0.125rem;
+    }
+    &__load {
+      @extend %flex-column-centered;
+      &__button {
+        font-weight: 600;
+        padding: 0.75em 0.85em;
+        max-width: 80%;
+        border-radius: 0.25em;
+        background-color: $buttonColor;
+        border: 3px solid $buttonColor;
+        color: $buttonTextColor;
+        transition: background-color 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+        &:focus {
+          outline-style: none;
+        }
+        &:hover {
+          background-color: darken($color: $buttonColor, $amount: 5);
+        }
+        &:active {
+          background-color: darken($color: $buttonColor, $amount: 5);
+          border-style: inset;
+          border-color: darken($color: $buttonColor, $amount: 10);
+        }
+      }
+    }
+  }
+  &__time {
+    @extend %flex-column-centered;
+    &__display {
+      @extend %flex-column-centered;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #ec2828;
+    }
+  }
+}

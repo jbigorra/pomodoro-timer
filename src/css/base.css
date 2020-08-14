@@ -1,0 +1,13 @@
+:root {
+  --font-family: 'Nunito', sans-serif;
+}
+
+body, pure-g {
+  font-family: 'Nunito' !important;
+  font-size: 18px;
+  background-color: #fefef0;
+}
+
+h1 {
+  font-size: 2rem;
+}
